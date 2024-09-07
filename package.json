@@ -40,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sacc": "^0.0.1",
+    "sass": "^1.78.0"
   }
 }
