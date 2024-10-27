@@ -14,7 +14,7 @@ const WelcomeImg: React.FC = () => {
                 setTimeout(() => {
                     setWelcomeText('MyIntroduction');
                 }, 3000);
-            }, 6000);
+            }, 3000);
             
             return () => clearTimeout(timeoutId2);
         }, 1000);
