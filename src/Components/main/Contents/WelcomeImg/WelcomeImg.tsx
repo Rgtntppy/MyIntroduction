@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 const WelcomeImg: React.FC = () => {
     const [welcomeText, setWelcomeText] = useState<string>('');
     const [animate, setAnimate] = useState<boolean>(false);
+    const [showOverlay, setShowOverlay] = useState<boolean>(false);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
 
     useEffect(() => {
         const timeoutId1 = setTimeout(() => {
@@ -13,8 +15,14 @@ const WelcomeImg: React.FC = () => {
                 setAnimate(true);
                 setTimeout(() => {
                     setWelcomeText('MyIntroduction');
+                    const timeoutId3 = setTimeout(() => {
+                        setShowOverlay(true);
+                        setIsVisible(true);
+                    }, 3000);
+
+                    return () => clearTimeout(timeoutId3);
                 }, 3000);
-            }, 6000);
+            }, 3000);
             
             return () => clearTimeout(timeoutId2);
         }, 1000);
@@ -23,7 +31,8 @@ const WelcomeImg: React.FC = () => {
     }, []);
 
     return (
-        <div className='welcomeImg'>
+        <div className={`welcomeImg ${isVisible ? 'visible' : ''}`}>
+            <div className='welcomeBackground'/>
             {welcomeText === 'welcome!' ? (
                 <p className={`welcomeText ${animate ? 'slideOut' : ''}`}>
                     {welcomeText}
