@@ -23,7 +23,7 @@ const HamburgerMenu: React.FC<HeaderTabProps> = ({ selectedTabIndex, setSelected
             {/* ハンバーガーボタン */}
             <button className={`hamburgerIcon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 <div className='bar'></div>
-                <div className='bar'></div>
+                {!isOpen && <span className='menuText'>menu</span>}
                 <div className='bar'></div>
             </button>
             
