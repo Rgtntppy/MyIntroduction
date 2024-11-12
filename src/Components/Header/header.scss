@@ -1,3 +1,21 @@
-.title {
-    margin: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
+$header-height: 80px;
+
+.header {
+    display: block;
+    position: fixed;
+    top: 0;
+    height: $header-height;
+    width: 100vw;
+    z-index: 1000;
+    background-color: aliceblue;
+
+    .title {
+        margin: 20px;
+        font-family: "Comfortaa", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
 }

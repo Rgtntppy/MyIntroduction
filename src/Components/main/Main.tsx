@@ -3,7 +3,7 @@ import WelcomeImg from 'Components/main/Contents/WelcomeImg/WelcomeImg';
 
 const Main = () => {
     return (
-        <>
+        <div className='mainContent'>
         <WelcomeImg/>
         <section id='section1' className='section-wrapper'>
             <div className='bg-image-fixed'></div>
@@ -25,7 +25,7 @@ const Main = () => {
                 <h2>section 3</h2>
             </div>
         </section>
-        </>
+        </div>
     );
 }
 
