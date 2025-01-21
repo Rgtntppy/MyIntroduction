@@ -1,5 +1,5 @@
 import 'Components/main/main.scss';
-import WelcomeImg from 'Components/main/Contents/WelcomeImg/WelcomeImg';
+import WelcomeImg from 'Components/main/Contents/WelcomeContents/WelcomeImg';
 
 const Main = () => {
     return (
